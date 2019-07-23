@@ -31,15 +31,27 @@ $(document).ready(function() {
         $("finalTotal").text(userTotal);
     }
 
+    function winner() {
+        alert("You won!");
+        wins++;
+        $("numberWins").text(wins);
+        reset();
 
+    }
 
+    function loser() {
+        alert("You lose!");
+        losses++;
+        $("numberLosses").text(losses);
+        reset();
+    }
 
 
 
 
     $("#one").on("click",function(){
         userTotal = userTotal + num1;
-        console.log("Updated userTotal= " + usertotal);
+        console.log("Updated userTotal= " + userTotal);
         $("#finalTotal").text(userTotal);
             if (userTotal === Random) {
                 winner();
@@ -47,6 +59,20 @@ $(document).ready(function() {
             else if (userTotal > Random) {
                 loser();
             }
+        
+
+    })
+
+    $("#two").on("click", function(){
+        usertotal = userTotal = num2;
+        console.log("Updated usertotal= " + userTotal);
+        $("#finalTotal").text(userTotal);
+        if (userTotal === Random) {
+            winner();
+        }
+         else if (userTotal > Random) {
+             loser();
+         }
         
 
     })
