@@ -31,4 +31,24 @@ $(document).ready(function() {
         $("finalTotal").text(userTotal);
     }
 
+
+
+
+
+
+
+    $("#one").on("click",function(){
+        userTotal = userTotal + num1;
+        console.log("Updated userTotal= " + usertotal);
+        $("#finalTotal").text(userTotal);
+            if (userTotal === Random) {
+                winner();
+            }
+            else if (userTotal > Random) {
+                loser();
+            }
+        
+
+    })
+
 })
