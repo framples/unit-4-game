@@ -1,0 +1,58 @@
+body{
+	background-image: url("../images/background.jpg")
+}
+div{
+	background-color: rgb(168, 168, 168);
+	margin: 10px;
+	width: 25%
+}
+div{
+	border: solid 2px rgba(255, 255, 0, 0.479);
+	padding: 10px;
+}
+h1, h3, span{
+	font-weight: bold;
+	text-align: center;
+}
+h1{
+    font-size: 30pt;
+}
+ul {
+	list-style: disc inside;
+	text-indent: 20px;
+}
+div.header, div.pokemon{
+	background-color: rgb(168, 168, 168);
+}
+div.header, div.instructions{
+	width: 50%;
+}
+.winningNumber, .winsAndLosses{
+	float: left;
+	width: 15%;
+	height: 60px;
+}
+.userTotal{
+	width: 15%;
+    height: 60px;
+    font-weight: bold;
+}
+.pokemon{
+	clear: both;
+}
+.pokemonImage{
+	height: 60px;
+	margin: 10px;
+}
+#blue{
+	color: #3092c7;
+}
+#green{
+	color: #00aa59;
+}
+#red{
+	color: #ec4b5f;
+}
+#yellow{
+	color: #ffc225;
+}

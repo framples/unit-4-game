@@ -31,7 +31,7 @@ $(document).ready(function() {
         userTotal=0;
         $("#finalTotal").text(userTotal);
     }
-
+//function to run when a win or loss occurs ** I TRIED TO DO JQUERY TO UPDATE THE HTML TO SAY 'YOU WON' IN winAndLosses DIV BUT IT KEPT BREAKING EVERYTHING
     function winner() {
         alert("You won!");
         wins++;
