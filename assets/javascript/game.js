@@ -4,10 +4,10 @@ $(document).ready(function() {
 
     $("#randomNumber").text(Random);
 
-    var num1= Math.floor(Math.random()*11+1)
-    var num2= Math.floor(Math.random()*11+1)
-    var num3= Math.floor(Math.random()*11+1)
-    var num4= Math.floor(Math.random()*11+1)
+    var num1= Math.floor(Math.random()*11+1);
+    var num2= Math.floor(Math.random()*11+1);
+    var num3= Math.floor(Math.random()*11+1);
+    var num4= Math.floor(Math.random()*11+1);
 
     var userTotal=0;
     var wins=0;
@@ -21,20 +21,21 @@ $(document).ready(function() {
     function reset() {
         Random=Math.floor(Math.random()*101+19);
         console.log(Random);
+        
 
         $("#randomNumber").text(Random);
-        num1= Math.floor(Math.random()*11+1)
-        num2= Math.floor(Math.random()*11+1)
-        num3= Math.floor(Math.random()*11+1)
-        num4= Math.floor(Math.random()*11+1)
+        num1= Math.floor(Math.random()*11+1);
+        num2= Math.floor(Math.random()*11+1);
+        num3= Math.floor(Math.random()*11+1);
+        num4= Math.floor(Math.random()*11+1);
         userTotal=0;
-        $("finalTotal").text(userTotal);
+        $("#finalTotal").text(userTotal);
     }
 
     function winner() {
         alert("You won!");
         wins++;
-        $("numberWins").text(wins);
+        $("#numberWins").text(wins);
         reset();
 
     }
@@ -42,7 +43,7 @@ $(document).ready(function() {
     function loser() {
         alert("You lose!");
         losses++;
-        $("numberLosses").text(losses);
+        $("#numberLosses").text(losses);
         reset();
     }
 
@@ -64,7 +65,7 @@ $(document).ready(function() {
     })
 
     $("#two").on("click", function(){
-        usertotal = userTotal = num2;
+        userTotal = userTotal + num2;
         console.log("Updated userTotal= " + userTotal);
         $("#finalTotal").text(userTotal);
         if (userTotal === Random) {
@@ -80,7 +81,7 @@ $(document).ready(function() {
     $("#three").on("click", function(){
         userTotal = userTotal + num3;
         console.log("Updated userTotal= " + userTotal);
-        $("#finaltotal").text(userTotal);
+        $("#finalTotal").text(userTotal);
         if (userTotal === Random) {
             winner();
         }
@@ -93,9 +94,9 @@ $(document).ready(function() {
 
     $("#four").on("click", function(){
         userTotal = userTotal +num4;
-        console.log("Updated userTotal= " + usertotal);
+        console.log("Updated userTotal= " + userTotal);
         $("#finalTotal").text(userTotal);
-        if (usertotal === Random) {
+        if (userTotal === Random) {
             winner();
         }
         else if (userTotal > Random) {
